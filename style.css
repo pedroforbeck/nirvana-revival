@@ -127,3 +127,13 @@ h1, h2, h3 {
 .spin {
     animation: spin-animation 2s linear infinite;
 }
+
+@keyframes spin-animation {
+    100% { transform: rotate(360deg); }
+}
+
+#player-status {
+    color: var(--blood-red);
+    font-weight: bold;
+    margin-top: 10px;
+}
