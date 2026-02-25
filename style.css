@@ -106,7 +106,7 @@ h1, h2, h3 {
 .vinyl {
     width: 200px;
     height: 200px;
-    background-image: url('https://github.com/pedroforbeck/nirvana-revival/blob/develop/inutero.png?raw=true');
+    background-image: url('inutero.png');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
