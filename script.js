@@ -14,8 +14,14 @@ nylBtn.addEventListener('click', function() {
     // pause
     else {
         audioPlayer.pause();
-        vinylBtn.classList.remove('spin');
+        vinylBtn.classList.remove('spin'); // Removes rotation
         statusText.textContent = "PAUSED";
         statusText.style.color = "var(--blood-red)";
     }
+});
+
+audioPlayer.addEventListener('ended', function() {
+    vinylBtn.classList.remove('spin');
+    statusText.textContent = "CLICK TO PLAY";
+    statusText.style.color = "var(--blood-red)";
 });
