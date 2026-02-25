@@ -1,21 +1,25 @@
-const audio = document.getElementById("nirvana-audio");
-const vinylBtn = document.getElementById("vinyl-btn");
-const statusText = document.getElementById("player-status");
+document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById("nirvana-audio");
+    const vinylBtn = document.getElementById("vinyl-btn");
+    const statusText = document.getElementById("player-status");
 
-if (vinylBtn) {
-    vinylBtn.onclick = function() {
-        if (audio.paused) {
-            audio.play().then(() => {
-                vinylBtn.classList.add("spin");
-                statusText.innerText = "NOW PLAYING: DRAIN YOU";
-            }).catch(error => {
-                console.log("Erro ao tocar:", error);
-                alert("Clique novamente para confirmar o áudio.");
-            });
-        } else {
-            audio.pause();
-            vinylBtn.classList.remove("spin");
-            statusText.innerText = "PAUSED";
-        }
-    };
-}
+    if (vinylBtn && audio) {
+        vinylBtn.addEventListener("click", function() {
+            if (audio.paused) {
+                // Tenta dar o play
+                audio.play().then(() => {
+                    vinylBtn.classList.add("spin");
+                    statusText.innerText = "NOW PLAYING: DRAIN YOU";
+                    statusText.style.color = "var(--cyan)";
+                }).catch(error => {
+                    console.error("Erro ao tocar áudio:", error);
+                });
+            } else {
+                audio.pause();
+                vinylBtn.classList.remove("spin");
+                statusText.innerText = "PAUSED";
+                statusText.style.color = "var(--blood-red)";
+            }
+        });
+    }
+});
