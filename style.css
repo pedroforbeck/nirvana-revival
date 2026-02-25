@@ -120,14 +120,11 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
-/* Ligar com js */
-/* Seleciona o disco apenas quando a classe spin é adicionada via JS */
 .vinyl.spin {
-    /* Mantemos o tamanho e formato, e adicionamos a animação */
+
     animation: spin-animation 2s linear infinite !important;
 }
 
-/* Ajuste no Keyframes para não quebrar o layout */
 @keyframes spin-animation {
     from {
         transform: rotate(0deg) scale(1);
