@@ -210,3 +210,32 @@ h1, h2, h3 {
     color: white;
     cursor: crosshair;
 }
+
+button {
+    background-color: var(--blood-red);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    padding: 15px 30px;
+    border: 2px solid #000;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #000;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--dark-bg);
+    border-top: 2px solid var(--blood-red);
+    color: #666;
+    font-size: 0.9rem;
+}
