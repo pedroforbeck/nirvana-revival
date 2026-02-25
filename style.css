@@ -55,3 +55,33 @@ h1, h2, h3 {
     transform: translate(-50%, -50%);
     pointer-events: none; /* Prevents clicking the video */
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--dark-bg), var(--water-blue));
+    opacity: 0.7;
+    z-index: -1;
+}
+
+
+.title {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 3px 0px var(--blood-red), -3px 0px var(--cyan);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--cyan);
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
