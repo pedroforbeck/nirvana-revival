@@ -239,3 +239,17 @@ footer {
     color: #666;
     font-size: 0.9rem;
 }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--dark-bg);
+    border-top: 2px solid var(--blood-red);
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .title { font-size: 3rem; }
+    .gallery-images { flex-direction: column; }
+}
