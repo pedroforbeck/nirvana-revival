@@ -3,22 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const vinylBtn = document.getElementById("vinyl-btn");
     const statusText = document.getElementById("player-status");
 
+    // Verifica se os elementos existem antes de tentar usá-los
     if (vinylBtn && audio) {
         vinylBtn.addEventListener("click", function() {
             if (audio.paused) {
-                // Tenta dar o play
-                audio.play().then(() => {
-                    vinylBtn.classList.add("spin");
-                    statusText.innerText = "NOW PLAYING: DRAIN YOU";
-                    statusText.style.color = "var(--cyan)";
-                }).catch(error => {
-                    console.error("Erro ao tocar áudio:", error);
-                });
+                audio.play();
+                vinylBtn.classList.add("spin");
+                statusText.innerText = "NOW PLAYING: DRAIN YOU";
             } else {
                 audio.pause();
                 vinylBtn.classList.remove("spin");
                 statusText.innerText = "PAUSED";
-                statusText.style.color = "var(--blood-red)";
             }
         });
     }
