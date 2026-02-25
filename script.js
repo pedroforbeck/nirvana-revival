@@ -1,27 +1,21 @@
-const audioPlayer = document.getElementById('nirvana-audio');
-const vinylBtn = document.getElementById('vinyl-btn');
-const statusText = document.getElementById('player-status');
+const audio = document.getElementById("nirvana-audio");
+const vinylBtn = document.getElementById("vinyl-btn");
+const statusText = document.getElementById("player-status");
 
-nylBtn.addEventListener('click', function() {
-
-    // force audio
-    if (audioPlayer.paused) {
-        audioPlayer.play();
-        vinylBtn.classList.add('spin');
-        statusText.textContent = "NOW PLAYING: ANEURYSM '91";
-        statusText.style.color = "var(--cyan)";
-    }
-    // pause
-    else {
-        audioPlayer.pause();
-        vinylBtn.classList.remove('spin'); // Removes rotation
-        statusText.textContent = "PAUSED";
-        statusText.style.color = "var(--blood-red)";
-    }
-});
-
-audioPlayer.addEventListener('ended', function() {
-    vinylBtn.classList.remove('spin');
-    statusText.textContent = "CLICK TO PLAY";
-    statusText.style.color = "var(--blood-red)";
-});
+if (vinylBtn) {
+    vinylBtn.onclick = function() {
+        if (audio.paused) {
+            audio.play().then(() => {
+                vinylBtn.classList.add("spin");
+                statusText.innerText = "NOW PLAYING: DRAIN YOU";
+            }).catch(error => {
+                console.log("Erro ao tocar:", error);
+                alert("Clique novamente para confirmar o áudio.");
+            });
+        } else {
+            audio.pause();
+            vinylBtn.classList.remove("spin");
+            statusText.innerText = "PAUSED";
+        }
+    };
+}
