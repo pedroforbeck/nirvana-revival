@@ -106,13 +106,13 @@ h1, h2, h3 {
 .vinyl {
     width: 200px;
     height: 200px;
-    background-image: url('inutero.png');
+    background-image: url('https://github.com/pedroforbeck/nirvana-revival/blob/develop/inutero.png?raw=true');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
     margin: 20px auto;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.8); /* Dá um efeito 3D ao disco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
     transition: transform 0.3s;
 }
 
