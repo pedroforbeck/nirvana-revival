@@ -103,23 +103,20 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.vinyl-placeholder {
+.vinyl {
     width: 200px;
     height: 200px;
-    background-color: #111;
-    border: 2px solid #333;
+    background-image: url('inutero.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
     margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    color: white;
-    font-size: 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8); /* Dá um efeito 3D ao disco */
     transition: transform 0.3s;
 }
 
-.vinyl-placeholder:hover {
+.vinyl:hover {
     transform: scale(1.05);
 }
 
