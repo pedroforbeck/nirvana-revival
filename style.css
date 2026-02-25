@@ -253,3 +253,56 @@ footer {
     .title { font-size: 3rem; }
     .gallery-images { flex-direction: column; }
 }
+
+.form-wrapper {
+    margin-top: 80px;
+    padding: 50px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--water-blue);
+    border-top: 4px solid var(--cyan);
+}
+
+.form-wrapper h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--cyan);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--blood-red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid var(--water-blue);
+    color: var(--parchment);
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--blood-red);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+    background-color: rgba(139, 0, 0, 0.1);
+}
+
+
+.player-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
