@@ -91,7 +91,7 @@ h1, h2, h3 {
     gap: 40px;
 }
 
-/* --- PLAYER BOX CORRIGIDO --- */
+
 .player-box {
     flex: 1;
     min-width: 300px;
@@ -113,7 +113,7 @@ h1, h2, h3 {
     box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.6);
     transform: rotate(-2deg); 
     border-bottom: 3px dashed rgba(0,0,0,0.1); 
-} /* AQUI ESTAVA FALTANDO ESSA CHAVE! */
+} 
 
 .player-box::before {
     content: '';
