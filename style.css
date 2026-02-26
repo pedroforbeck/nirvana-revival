@@ -376,3 +376,36 @@ footer {
     .gallery-images { flex-direction: column; }
     .radio-group { flex-direction: column; gap: 10px; }
 }
+
+
+body {
+    position: relative; 
+}
+
+.in-utero-angel {
+    position: absolute;
+    bottom: 2%; 
+    right: -2%; 
+    width: 600px; 
+    max-width: 55vw; 
+    height: auto;
+    
+    z-index: 100; 
+    pointer-events: none; 
+    
+  
+    filter: drop-shadow(-15px 15px 25px rgba(0, 0, 0, 0.9)); 
+    
+    opacity: 0.85; 
+    transition: transform 0.5s ease;
+}
+
+
+@media (max-width: 768px) {
+    .in-utero-angel {
+        bottom: 5%;
+        right: -10%;
+        max-width: 80vw;
+        opacity: 0.6; 
+    }
+}
