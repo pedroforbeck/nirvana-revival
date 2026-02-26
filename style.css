@@ -67,7 +67,6 @@ h1, h2, h3 {
     z-index: -1;
 }
 
-
 .title {
     font-size: 5rem;
     color: white;
@@ -92,7 +91,6 @@ h1, h2, h3 {
     gap: 40px;
 }
 
-
 .player-box {
     flex: 1;
     min-width: 300px;
@@ -101,12 +99,16 @@ h1, h2, h3 {
     border-top: 4px solid var(--blood-red);
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .vinyl {
     width: 200px;
     height: 200px;
-    background-image: url('inutero.png');
+    background-image: url('https://imgs.search.brave.com/o0449_yKow9tV0Y3L9cIuYyN_D5vW5L6xL-u0g3_IqE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFuU0xXWlh6Z0wu/anBn'); /* Example vinyl cover */
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -121,17 +123,12 @@ h1, h2, h3 {
 }
 
 .vinyl.spin {
-
     animation: spin-animation 2s linear infinite !important;
 }
 
 @keyframes spin-animation {
-    from {
-        transform: rotate(0deg) scale(1);
-    }
-    to {
-        transform: rotate(360deg) scale(1);
-    }
+    from { transform: rotate(0deg) scale(1); }
+    to { transform: rotate(360deg) scale(1); }
 }
 
 #player-status {
@@ -145,17 +142,20 @@ h1, h2, h3 {
     min-width: 300px;
 }
 
+.gallery h3 {
+    margin-bottom: 10px;
+}
+
 .gallery-images {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
 }
 
 .gallery-images img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    filter: sepia(0.6) contrast(1.2); /* Grunge effect */
+    filter: sepia(0.6) contrast(1.2); 
     transition: transform 0.3s;
 }
 
@@ -167,13 +167,7 @@ h1, h2, h3 {
     text-align: center;
     margin-top: 80px;
     padding: 50px 30px;
-
-    /* New Background Image Setup */
-    background-image: url('paper-texture.jpg');
-    background-size: cover;
-    background-position: center;
-
-    /* Style adjustments for the light paper */
+    background-color: var(--parchment);
     color: #111;
     border: 2px solid #000;
     box-shadow: 8px 8px 0px var(--blood-red);
@@ -211,49 +205,7 @@ h1, h2, h3 {
     cursor: crosshair;
 }
 
-button {
-    background-color: var(--blood-red);
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    padding: 15px 30px;
-    border: 2px solid #000;
-    width: 100%;
-    cursor: pointer;
-    box-shadow: 5px 5px 0 #000;
-    transition: all 0.2s;
-    margin-top: 20px;
-}
-
-button:hover {
-    transform: translateY(2px);
-    box-shadow: 2px 2px 0 #000;
-}
-
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--dark-bg);
-    border-top: 2px solid var(--blood-red);
-    color: #666;
-    font-size: 0.9rem;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--dark-bg);
-    border-top: 2px solid var(--blood-red);
-    color: #666;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .title { font-size: 3rem; }
-    .gallery-images { flex-direction: column; }
-}
-
+/* Form Section Styles */
 .form-wrapper {
     margin-top: 80px;
     padding: 50px 30px;
@@ -274,7 +226,7 @@ footer {
     flex-direction: column;
 }
 
-.input-group label {
+.input-group label, .ticket-type > label {
     margin-bottom: 5px;
     font-weight: bold;
     color: var(--blood-red);
@@ -299,10 +251,79 @@ footer {
     background-color: rgba(139, 0, 0, 0.1);
 }
 
+/* Custom Radio Buttons */
+.ticket-type {
+    margin-top: 15px;
+}
 
-.player-box {
+.radio-group {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-label {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--parchment);
+    font-size: 1.1rem;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--blood-red); /* Modern browsers */
+    transform: scale(1.2);
+}
+
+.checkbox-group {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    accent-color: var(--cyan);
+    transform: scale(1.2);
+}
+
+button {
+    background-color: var(--blood-red);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    padding: 15px 30px;
+    border: 2px solid #000;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #000;
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--dark-bg);
+    border-top: 2px solid var(--blood-red);
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .title { font-size: 3rem; }
+    .gallery-images { flex-direction: column; }
+    .radio-group { flex-direction: column; gap: 10px; }
 }
