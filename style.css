@@ -256,19 +256,20 @@ h1, h2, h3 {
     cursor: crosshair;
 }
 
-/* Form Section Styles */
 .form-wrapper {
     margin-top: 80px;
     padding: 50px 30px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.85);
     border: 1px solid var(--water-blue);
     border-top: 4px solid var(--cyan);
+    color: var(--parchment);
 }
 
 .form-wrapper h2 {
     text-align: center;
     font-size: 3rem;
     color: var(--cyan);
+    margin-bottom: 10px;
 }
 
 .input-group {
@@ -287,7 +288,7 @@ h1, h2, h3 {
 
 .input-group input {
     padding: 15px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--water-blue);
     color: var(--parchment);
     font-family: 'Special Elite', monospace;
@@ -299,18 +300,18 @@ h1, h2, h3 {
     outline: none;
     border-color: var(--blood-red);
     box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
-    background-color: rgba(139, 0, 0, 0.1);
+    background-color: rgba(139, 0, 0, 0.2);
 }
 
-
+/* Tipos de Ingresso (Radio Buttons) */
 .ticket-type {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .radio-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -318,33 +319,36 @@ h1, h2, h3 {
 .radio-label {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     color: var(--parchment);
     font-size: 1.1rem;
 }
 
 .radio-label input[type="radio"] {
-    accent-color: var(--blood-red); 
-    transform: scale(1.2);
+    accent-color: var(--blood-red);
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 .checkbox-group {
     margin-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .checkbox-group label {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: var(--parchment);
+    cursor: pointer;
 }
 
 .checkbox-group input[type="checkbox"] {
     accent-color: var(--cyan);
-    transform: scale(1.2);
+    transform: scale(1.3);
+    cursor: pointer;
 }
-
 button {
     background-color: var(--blood-red);
     color: white;
